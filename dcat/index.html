@@ -1064,6 +1064,7 @@ ex:table-service-005
             <li><a href="#Property:resource_landing_page">landing page</a></li>
             <li><a href="#Property:resource_license">license</a></li>
             <li><a href="#Property:resource_language">language</a></li>
+            <li><a href="#Property:resource_metadata">metadata</a></li>
             <li><a href="#Property:resource_relation">relation</a></li>
             <li><a href="#Property:resource_rights">rights</a></li>
             <li><a href="#Property:resource_qualified_relation">qualified relation</a></li>
@@ -1388,6 +1389,7 @@ ex:table-service-005
                     The property <a href="#Property:dataset_distribution"><code>dcat:distribution</code></a> SHOULD be used to link from a <a href="#Class:Dataset"><code>dcat:Dataset</code></a> to a representation of the dataset, described as a <a href="#Class:Distribution"><code>dcat:Distribution</code></a></td></tr>
                 <tr><th class="prop">See also:</th><td>Sub-properties of <code>dcterms:relation</code> in particular
                     <a href="#Property:dataset_distribution"><code>dcat:distribution</code></a>,
+                    <a href="#Property:resource_metadata"><code>dcat:metadata</code></a>,
                     <a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
                     (and its sub-properties
                     <a href="#Property:catalog_catalog"><code>dcat:catalog</code></a>,
@@ -1455,7 +1457,7 @@ ex:table-service-005
               <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
               <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
               <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
-              <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>).
+              <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>), or <a href="#Property:resource_metadata"><code>dcat:metadata</code></a>.
               </td>
               </tr>
               </table>
@@ -1470,6 +1472,19 @@ ex:table-service-005
               </p>
             </aside>
 
+        </section>
+
+        <section id="Property:resource_metadata">
+            <h4>Property: metadata</h4>
+
+            <table class="def">
+                <tr><th>RDF Property:</th><td><a href="http://www.w3.org/ns/dcat#metadata"><code>dcat:metadata</code></a></td></tr>
+                 <tr><th>Type:</th><td><a href="http://www.w3.org/2002/07/owl#ObjectProperty"><code title="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</code></a></td></tr>
+                <tr><th class="prop">Definition:</th><td>A reference to a resource that describes the structure, contents, quality, provenance, etc., of this resource.</td></tr>
+                <tr><th class="prop">Sub-property of:</th><td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td></tr>
+                <tr><th class="prop">Usage note:</th><td>The range of this property is intentionally left open, with the purpose of allowing the attachment of different types of metadata. This property can typically be used to relate a resource to metadata expressed in DQV (Data Quality Vocabulary), PROV (Provenance ontology), etc. It is possible to refer to a 'bundle' of metadata resources, aggregated using mechanisms like OAI-ORE, FDO or PROV-O for example.
+                </td></tr>
+            </table>
         </section>
 
         <section id="Property:resource_keyword">

@@ -1347,6 +1347,18 @@ dcat:mediaType
   skos:scopeNote "This property SHOULD be used when the media type of the distribution is defined in the IANA media types registry https://www.iana.org/assignments/media-types/, otherwise dcterms:format MAY be used with different values."@en ;
   skos:scopeNote "Denne egenskab BØR anvendes hvis distributionens medietype optræder i 'IANA media types registry' https://www.iana.org/assignments/media-types/, ellers KAN egenskaben dcterms:format anvendes med et andet udfaldsrum."@da ;
 .
+
+dcat:metadata 
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
+  rdfs:subPropertyOf dcterms:relation ;
+  rdfs:comment "A reference to a resource that describes the structure, contents, quality, provenance, etc., of this resource."@en ;
+  skos:definition "A reference to a resource that describe the structure, contents, quality, provenance, etc., of this resource."@en ;
+  skos:scopeNote "The range of this property is intentionally left open, with the purpose of allowing the attachment of different types of metadata. This property can typically be used to relate a resource to metadata expressed in DQV (Data Quality Vocabulary), PROV (Provenance ontology), etc. It is possible to refer to a 'bundle' of metadata resources, aggregated using mechanisms like OAI-ORE, FDO or PROV-O for example."@en ;
+  skos:historyNote "This can be seen as a generalization of the StatDCAT-AP stat:attribute, stat:dimension and dqv:hasQualityAnnotation."@en
+.
+
 dcat:next owl:inverseOf dcat:prev ;
   rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
   skos:changeNote "New property added in DCAT 3."@en ;

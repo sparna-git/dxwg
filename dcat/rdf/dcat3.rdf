@@ -751,6 +751,15 @@
     <rdfs:label xml:lang="it">tipo di media</rdfs:label>
     <skos:definition xml:lang="es">Esta propiedad debe ser usada cuando está definido el tipo de media de la distribución en IANA, de otra manera dcterms:format puede ser utilizado con diferentes valores.</skos:definition>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#metadata">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-3/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:comment xml:lang="en">A reference to a resource that describes the structure, contents, quality, provenance, etc., of this resource.</rdfs:comment>
+    <skos:definition xml:lang="en">A reference to a resource that describes the structure, contents, quality, provenance, etc., of this resource.</skos:definition>
+    <skos:scopeNote xml:lang="en">The range of this property is intentionally left open, with the purpose of allowing the attachment of different types of metadata. This property can typically be used to relate a resource to metadata expressed in DQV (Data Quality Vocabulary), PROV (Provenance ontology), etc. It is possible to refer to a 'bundle' of metadata resources, aggregated using mechanisms like OAI-ORE, FDO or PROV-O for example.</skos:scopeNote>
+    <skos:historyNote xml:lang="en">This can be seen as a generalization of the StatDCAT-AP stat:attribute, stat:dimension and dqv:hasQualityAnnotation.</skos:historyNote>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
     <rdfs:comment xml:lang="es">Este axioma se necesita de manera que Protege cargue DCAT3 sin problemas.</rdfs:comment>
     <rdfs:comment xml:lang="en">This axiom needed so that Protege loads DCAT 3 without errors.</rdfs:comment>
